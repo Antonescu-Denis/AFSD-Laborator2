@@ -14,6 +14,8 @@ else:
     tx1 = text[:length//2+1].upper().replace(' ', '')
     tx2 = text[length//2+1:][::-1]
     tx2 = tx2[0].upper() + tx2[1:]
-    for ch in ['.', ',', '!', '?']:
-        tx2 = tx2.replace(ch, '')
+    tx2 = tx2.replace(ch, '.')
+    tx2 = tx2.replace(ch, ',')
+    tx2 = tx2.replace(ch, '!')
+    tx2 = tx2.replace(ch, '?')
     print(tx1+tx2)
